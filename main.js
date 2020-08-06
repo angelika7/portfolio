@@ -42,9 +42,16 @@ app.get("/contact", function(req, res) {
     });
 }); 
 
-app.listen(5500, function() {
+/* app.listen(5500, function() {
     console.log("Server is working now!");
-}) 
+})  */
+
+app.set( 'port', ( process.env.PORT || 5000 ));
+
+// Start node server
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  });
 
 /* http.listen(process.env.PORT || 3000, function(){
     console.log('listening on', http.address().port);
