@@ -1,0 +1,22 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/main.scss public/css/style.css -w",
+    "start": "node main.js"
+  },
+  "author": "Angelika Chochorowska",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}

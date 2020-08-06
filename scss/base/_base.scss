@@ -1,0 +1,38 @@
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+}
+
+/* pre {
+    display: none;
+    white-space: normal;
+}
+ */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+// Breakpoints 
+
+$bp-largest: 125em;     // min. 2000px
+$bp-larger: 81.25em;    // 1300px
+$bp-large: 64em;    // 1024px
+$bp-medium-large: 51.875em;     // 830px
+$bp-medium: 48em;     // 768px
+$bp-medium-small: 42em;     // 672px
+$bp-small: 37.5em; // 600px
+$bp-medium-smaller: 34.0625em;     // 545px
+$bp-mobile: 26.625em; // 426px
+$bp-mobile-smallest: 23.75em; // < 380px
+
+

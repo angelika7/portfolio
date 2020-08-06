@@ -1,0 +1,23 @@
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+@import "components/certifications";
+@import "components/contact";
+@import "components/decorations";
+@import "components/description";
+@import "components/projects";
+@import "components/tools";
+@import "components/video";
+
+@import "../public/img/fawesome/fontawesome.scss";
+@import "../public/img/fawesome/solid.scss";
+@import "../public/img/fawesome/brands.scss";
+
+@import "layout/footer";
+@import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";

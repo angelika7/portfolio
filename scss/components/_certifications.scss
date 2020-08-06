@@ -1,0 +1,29 @@
+.certifications {
+    margin-top: 2rem;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 0 2rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile-smallest) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    &__item {
+        border: 2px solid $color-container;
+
+        .certificate {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

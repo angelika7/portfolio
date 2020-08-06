@@ -1,0 +1,150 @@
+.projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: -6rem;
+
+    @media only screen and (max-width: $bp-medium-large) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: -10rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        margin-top: -12rem;
+    }
+
+    &__item {
+        width: 100%;
+        height: 22rem;
+        position: relative;
+        padding: 3rem;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        backface-visibility: hidden;
+        overflow: hidden;
+        display: block;
+        border: 1.1rem solid $color-container;
+
+        @media only screen and (max-width: $bp-small) {
+            border: .5rem solid $color-container;
+        }
+
+        &:hover {
+            display: none;
+        }
+    } 
+
+    &__details {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; 
+        background-color: $color-container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        backface-visibility: hidden;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity .7s;
+        
+        &:hover {
+            z-index: 111;
+            opacity: 1;
+        }
+    }
+
+    &__icons {
+        padding-top: 1rem;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    &__link {
+        &,
+        &:visited {
+            color: $color-white;
+            font-size: 3.5rem;
+            transition: all .2s;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 3.5rem;
+            }
+        }
+
+        &:hover {
+            color: $color-light-blue;
+        }
+    }
+
+    &__info {
+        width: 90%;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3rem;
+
+        @media only screen and (max-width: $bp-medium-large) {
+            width: 70%;
+        }
+    }
+
+    &__list-info {
+        height: 7rem;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        align-items: center;
+        gap: 1rem;
+        width: 95%;
+        list-style: none;
+    }
+
+    &__item-info {
+
+        color: $color-white;
+        font-size: .7rem;
+        line-height: 2rem;
+        letter-spacing: .2rem;
+        
+        &::before {
+            content: '';
+            display: inline-block;
+            height: .8rem;
+            width: .8rem;
+            margin-right: .4rem;
+            background-color: $color-white;
+            -webkit-mask-image: url(/img/checkmark.svg);
+            mask-image: url(/img/checkmark.svg);
+            -webkit-mask-size: cover;
+            mask-size: cover;
+        }
+    }
+}

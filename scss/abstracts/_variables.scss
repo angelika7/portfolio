@@ -1,0 +1,34 @@
+// COLORS
+$color-container: #2E3444;
+$color-logo: #434B5D;
+$color-light-blue: #b0b4c099;
+$color-hover: #575E70;
+$color-backround-tool: #FCFDFE;
+$color-white: #fff;
+$color-black: #000;
+
+//Program's colors
+$color-html: #E34F26;
+$color-css: #1572B6;
+$color-js: #F7DF1E;
+$color-node: #339933;
+$color-jquery: #0769AD;
+$color-bootstrap: #563D7C;
+$color-react: #61DAFB;
+$color-sass: #CC6699;
+$color-npm: #CB3837;
+$color-mongodb: #47A248;
+$color-vsc: #007ACC;
+$color-git: #F05032;
+
+// FONT
+$default-font-size: 1.6rem;
+
+@font-face {
+    font-family: 'Metafors';
+    src: url('/fonts/metafors/metafors-Regular.ttf');
+}
+
+// FONT AWESOME
+
+$fa-font-path:                "/img/webfonts";
