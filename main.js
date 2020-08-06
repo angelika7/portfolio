@@ -3,13 +3,6 @@ const app = express();
 const path = require('path');
 /////////////////////
 
-
-/* navItem.addEventListener(click, active);
-
-function active() {
-    navItem.classList.toggle('active');
-} */
-
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 //app.use(express.static('./public/'));
@@ -49,7 +42,11 @@ app.get("/contact", function(req, res) {
     });
 }); 
 
-app.listen(5500, function() {
+/* app.listen(5500, function() {
     console.log("Server is working now!");
-})
+}) */
+
+http.listen(process.env.PORT || 3000, function(){
+    console.log('listening on', http.address().port);
+  });
 
